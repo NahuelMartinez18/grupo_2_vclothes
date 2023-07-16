@@ -6,7 +6,7 @@ Nuestro público objetivo son adolecentes y adultos que les guste vestir con és
 ### Integrantes del proyecto:
 **Nahuel Martinez:** Tengo 17 años, voy a 5to año de secundaria, me gusta la inteligencia artificial, la música y el cine.
 
-**Juan Carlos Gutierrez:** Tengo 17 años, estoy en el último año de secundaria. me gusta ir al gimnacio y la música.
+**Juan Carlos Gutierrez:** Tengo 17 años, estoy en el último año de secundaria, me gusta ir al gimnacio y la música.
 
 ### Páginas de referencia:
 - [King of the Kongo](https://kingofthekongo.com.ar/?gclid=Cj0KCQjwtamlBhD3ARIsAARoaEwbVtaBo5-xSj77Yv-0lIgoKstvGc3xIu6PE2CFtSpQ8MH76gVx80IaAhrfEALw_wcB "King of the Kongo"): Nos gusta la manera que tiene de presentar los elementos a medida que vas haciendo scroll por la página.
