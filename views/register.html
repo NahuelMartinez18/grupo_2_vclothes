@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/styleRegister.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+  <title>Register</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="/"><img class="logo" src="/img/icono.ico" alt="Logo"></a>
+    </div>
+    <nav class="nav">
+      <div class="nav__categorias">
+        <p class="nav__categorias__ctg1">
+          Categoría1
+        </p>
+        <p class="nav__categorias__ctg2">
+          Categoría2
+        </p>
+      </div>
+      <div class="nav__rigthDiv">
+        <div class="nav__rigthDiv__submitButton">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="nav__rigthDiv__cartButton">
+          <a class="nav__rigthDiv__cartButton__link" href="/carrito"><i class="fa-solid fa-cart-plus"></i></a>
+        </div>
+        <div class="nav__rigthDiv__userButton">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <nav class="nav2">
+      <form action="/" method="post">
+        <h2 class="h2-nav">Registrate</h2>
+        <p class="p-nav">Por favor ingrese su nombre, correo y contraseña</p>
+        <label for="">
+          <input class="input-form" type="email" name="Correo" placeholder="Correo" required>
+          <input class="input-form" type="text" name="Nombre" placeholder="Nombre" required>
+          <input class="input-form" type="password" name="Contraseña" placeholder="Contraseña" required>
+        </label>
+        <input class="boton-finalizar" type="submit" name="enviar" value="Finalizar">
+      </form>
+    </nav>
+  </main>
+  <footer class="footer">
+    <div class="footer__presentation">
+      <section class="footer__presentation__img">
+        <img class="footer__presentation__img__archivo" src="/img/vintageStyle.png" alt="vintageStyle">
+      </section>
+      <section class="footer__presentation__info">
+        <div class="footer__presentation__info__contact">
+          <p class="footer__presentation__info__contact__p">Contáctanos:</p><br>
+          <a class="footer__presentation__info__contact__link" href="#"><img
+              class="footer__presentation__info__contact__link__icon" src="/img/instagramIcon.jpg"
+              alt="instagramIcon"></a>
+          <a class="footer__presentation__info__contact__link" href="#"><img
+              class="footer__presentation__info__contact__link__icon" src="/img/facebookIcon.png"
+              alt="facebookIcon"></a>
+        </div>
+      </section>
+    </div>
+    <section class="footer__copyrigth">
+      <p class="footer__copyrigth__text">
+        Copyright © 2020-2023 VClothes S.R.L.
+      </p>
+    </section>
+  </footer>
+</body>
+
+</html>
