@@ -67,6 +67,92 @@ body {
 
 /* Estilos del Main */
 
+.main {
+  background-color: #E8C9AB;
+  padding-bottom: 15px;
+}
+
+.main__h1 {
+  text-align: center;
+  margin: auto;
+  padding: 30px 0px;
+}
+
+.main__sections__productos__item {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.main__sections__productos__item__img {
+  width: 145px;
+}
+
+.main__sections__productos__item__img__archivo {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.main__sections__productos__item__info {
+  margin-left: 15px;
+}
+
+.main__sections__productos__item__info__productName {
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+.main__sections__productos__item__info__productWaist {
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+.main__sections__productos__item__info__productPrice {
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+.main__sections__pagoTotal {
+  background-color: white;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.main__sections__pagoTotal__precio__subtotal {
+  margin-left: 10px;
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+.main__sections__pagoTotal__precio__envio {
+  margin-left: 10px;
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+.main__sections__pagoTotal__precio__total {
+  margin-left: 10px;
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+.main__sections__pagoTotal__button {
+  width: 100%;
+}
+
+.main__sections__pagoTotal__button__submit {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: black;
+  color: #F5D7BD;
+  padding: 15px;
+}
+
 /* Estilos del Main */
 
 /* Estilos del Footer */
@@ -110,10 +196,6 @@ body {
 /* Media Queries */
 @media (min-width: 481px) {
 
-  /* Estilos del Main */
-
-
-  /* Estilos del Main */
   /* Estilos del Footer */
   .footer__presentation {
     display: flex;
@@ -136,6 +218,23 @@ body {
 
 @media (min-width: 769px) {
 
+  /* Estilos del Main */
+  .main__sections {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main__sections__productos {
+    width: 63em;
+  }
+
+  .main__sections__pagoTotal {
+    width: 58em;
+  }
+
+  /* Estilos del Main */
+
   /* Estilos del Footer */
   .footer__presentation__img {
     width: 30em;
@@ -153,6 +252,16 @@ body {
   /* Estilos del Footer */
 }
 
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+
+  /* Estilos del Main */
+  .main__sections {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  /* Estilos del Main */
+}
 
 /* Media Queries */
