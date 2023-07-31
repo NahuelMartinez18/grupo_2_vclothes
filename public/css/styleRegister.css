@@ -83,11 +83,13 @@ form {
 .h2-nav {
   align-self: center;
   margin: 10px;
+  text-align: center;
 }
 
 .p-nav {
   align-self: center;
   margin: 15px;
+  text-align: center;
 }
 
 label {
