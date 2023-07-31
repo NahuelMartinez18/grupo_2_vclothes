@@ -15,8 +15,8 @@ app.post("/", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "index.html"))
 );
 
-app.get("/carrito", (req, res) =>
-  res.sendFile(path.join(__dirname, "views", "carrito.html"))
+app.get("/productCart", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "productCart.html"))
 );
 
 app.get("/register", (req, res) =>
@@ -27,6 +27,6 @@ app.get("/login", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "login.html"))
 );
 
-app.get("/ProductDetail", (req, res) =>
+app.get("/productDetail", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "productDetail.html"))
 );

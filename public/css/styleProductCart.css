@@ -57,7 +57,7 @@ body {
   font-size: 16px;
 }
 
-.nav__rigthDiv__userButton {
+.nav__rigthDiv__userButton__link {
   color: #F5D7BD;
   font-size: 16px;
   margin-right: 10px;
@@ -144,7 +144,7 @@ body {
   width: 100%;
 }
 
-.main__sections__pagoTotal__button__submit {
+.main__sections__pagoTotal__button__link__submit {
   width: 100%;
   border: none;
   border-radius: 15px;

@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/StyleproductDetail.css">
+  <link rel="stylesheet" href="/css/styleProductDetail.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
-  <title>Register</title>
+  <title>Nombre del Producto</title>
 </head>
 
 <body>
@@ -32,41 +32,43 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="nav__rigthDiv__cartButton">
-          <a class="nav__rigthDiv__cartButton__link" href="/carrito"><i class="fa-solid fa-cart-plus"></i></a>
+          <a class="nav__rigthDiv__cartButton__link" href="/productCart"><i class="fa-solid fa-cart-plus"></i></a>
         </div>
         <div class="nav__rigthDiv__userButton">
-          <i class="fa-solid fa-user"></i>
+          <a class="nav__rigthDiv__userButton__link" href="/login"><i class="fa-solid fa-user"></i></a>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <nav id="nav-main">
-        <div id="div-img">
-            <img src="/img/camisetaReebok.jpg" alt="Camiseta Reebok">
+    <nav class="nav-main">
+      <div class="div-img">
+        <img src="/img/camisetaReebok.jpg" alt="Camiseta Reebok">
+      </div>
+      <div class="div-carta">
+        <div class="div-nom-producto">
+          <p class="p-titulo">Camiseta Reebok</p>
         </div>
-        <div id="div-carta">
-            <div id="div-nom-producto">   
-                <p id="p-titulo">Camiseta Reebok</p>
-            </div>
-            <div id="div-lista">
-                <p class="p-lista">Descipcion del producto:</p>
-                <ul class="p-lista">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <p class="p-lista">Preicio del producto:</p>
-                <p class="p-lista">Talles y colores disponible:</p>
-                <p class="p-lista">Cantidad de productos:</p>
-            </div>
-            <div id="div-input">
-              <input type="submit" name="A-carrito" value="Añadir al carrito">
-            </div>
+        <div class="div-lista">
+          <p class="p-lista">Descipcion del producto:</p>
+          <ul class="p-lista">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <p class="p-lista">Preicio del producto:</p>
+          <p class="p-lista">Talles y colores disponible:</p>
+          <p class="p-lista">Cantidad de productos:</p>
         </div>
+        <div class="div-input">
+          <a href="/productCart">
+            <input type="submit" name="A-carrito" value="Añadir al carrito">
+          </a>
+        </div>
+      </div>
     </nav>
   </main>
   <footer class="footer">

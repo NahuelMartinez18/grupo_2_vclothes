@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/styleCarrito.css">
+  <link rel="stylesheet" href="/css/styleProductCart.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,10 +32,10 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="nav__rigthDiv__cartButton">
-          <a class="nav__rigthDiv__cartButton__link" href="/carrito"><i class="fa-solid fa-cart-plus"></i></a>
+          <a class="nav__rigthDiv__cartButton__link" href="/productCart"><i class="fa-solid fa-cart-plus"></i></a>
         </div>
         <div class="nav__rigthDiv__userButton">
-          <i class="fa-solid fa-user"></i>
+          <a class="nav__rigthDiv__userButton__link" href="/login"><i class="fa-solid fa-user"></i></a>
         </div>
       </div>
     </nav>
@@ -84,7 +84,9 @@
           <p class="main__sections__pagoTotal__precio__total">Total: ...</p><br>
         </div>
         <div class="main__sections__pagoTotal__button">
-          <button type="submit" class="main__sections__pagoTotal__button__submit">Finalizar Pedido</button>
+          <a href="/" class="main__sections__pagoTotal__button__link">
+            <button type="submit" class="main__sections__pagoTotal__button__link__submit">Finalizar Pedido</button>
+          </a>
         </div>
       </section>
     </div>
