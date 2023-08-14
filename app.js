@@ -3,9 +3,20 @@ const path = require("path");
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+/* llamado a formulario de carga de producto*/
+const mainRoutes=require('./routes/mainRoutes');
+
+app.use(express.static('./public'));
+app.set('view engine','ejs');
+
+
+app.use('/',mainRoutes);
+/*fin de agregador de carga de producto */
+
+
 app.listen(PORT, () => console.log("Servidor corriendo en el puerto:" + PORT));
 
-app.use(express.static(path.join(__dirname, "public")));
+
 
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "index.html"))
