@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>CargaProducto</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <nav class="nav2">
+          <% for(let i = 0;i<prod.length;i++){%>
+              <li>
+                  <a href=""><%= prod[i].name %></a>
+              </li>
+          <% } %>
+          <form  method="post">
+            <h2 class="h2-nav">Formulario Modificacion Producto</h2>
+              <input class="input-form" type="text" name="name" id="name" placeholder="Nombre Producto" required>
+              <input class="input-form" type="text" name="description" id="description" placeholder="Descripcion" required>
+              <input class="input-form" type="text" name="category" id="category" placeholder="Categoria" required>
+              <input class="input-form" type="text" name="color" id="color" placeholder="Color" required>
+              <input class="input-form" type="text" name="talle" id="talle" placeholder="Talle" required>
+              <input class="input-form" type="text" name="precio" id="precio" placeholder="Precio" required>  
+              <input class="input-form" type="file" name="vistaProd" id="vistaProd" accept=".jpg" >
+            <input class="boton-finalizar" type="submit" name="enviar" value="Guardar">
+          </form>
+        </nav>
+      </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
