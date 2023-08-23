@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <title>detalle producto</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        <nav class="nav-main">
+          <div class="div-img">
+            <img src="/img/camisetaReebok.jpg" alt="Camiseta Reebok">
+          </div>
+          <div class="div-carta">
+            <div class="div-nom-producto">
+              <p class="p-titulo">Camiseta Reebok</p>
+            </div>
+            <div class="div-lista">
+              <p class="p-lista">Descipcion del producto:</p>
+              <ul class="p-lista">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="p-lista">Preicio del producto:</p>
+              <p class="p-lista">Talles y colores disponible:</p>
+              <p class="p-lista">Cantidad de productos:</p>
+            </div>
+            <div class="div-input">
+              <a href="/productCart">
+                <input type="submit" name="A-carrito" value="Añadir al carrito">
+              </a>
+            </div>
+          </div>
+        </nav>
+      </main>
+
+    <%- include('../partials/footer.ejs') %>
+    
+</body>
+</html>

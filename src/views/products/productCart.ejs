@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <link rel="stylesheet" href="../css/styleProductCart.css">
+    <title>carrito</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main class="main">
+        <h1 class="main__h1">Carrito de Compras</h1>
+        <div class="main__sections">
+          <section class="main__sections__productos">
+            <article class="main__sections__productos__item">
+              <div class="main__sections__productos__item__img">
+                <img class="main__sections__productos__item__img__archivo" src="/img/camperaJeanCordero.jpg"
+                  alt="camperaJeanCordero">
+              </div>
+              <div class="main__sections__productos__item__info">
+                <p class="main__sections__productos__item__info__productName">Campera de Jeans Lois</p><br>
+                <p class="main__sections__productos__item__info__productPrice">$15.000</p><br>
+                <p class="main__sections__productos__item__info__productWaist">Talle:</p><br>
+              </div>
+            </article>
+            <article class="main__sections__productos__item">
+              <div class="main__sections__productos__item__img">
+                <img class="main__sections__productos__item__img__archivo" src="/img/remeraNike.jpg" alt="remeraNike">
+              </div>
+              <div class="main__sections__productos__item__info">
+                <p class="main__sections__productos__item__info__productName">Remera NIKE DRI-FIT</p><br>
+                <p class="main__sections__productos__item__info__productPrice">$9.999</p><br>
+                <p class="main__sections__productos__item__info__productWaist">Talle:</p><br>
+              </div>
+            </article>
+            <article class=" main__sections__productos__item">
+              <div class="main__sections__productos__item__img">
+                <img class="main__sections__productos__item__img__archivo" src="/img/camisetaReebok.jpg"
+                  alt="camisetaReebok">
+              </div>
+              <div class="main__sections__productos__item__info">
+                <p class="main__sections__productos__item__info__productName">Camiseta Reebok</p><br>
+                <p class="main__sections__productos__item__info__productPrice">$7.999</p><br>
+                <p class="main__sections__productos__item__info__productWaist">Talle:</p><br>
+              </div>
+            </article>
+          </section>
+          <section class=" main__sections__pagoTotal">
+            <div class="main__sections__pagoTotal__precio">
+              <p class="main__sections__pagoTotal__precio__subtotal">Subtotal: ...</p><br>
+              <p class="main__sections__pagoTotal__precio__envio">Envío: ...</p><br>
+              <p class="main__sections__pagoTotal__precio__total">Total: ...</p><br>
+            </div>
+            <div class="main__sections__pagoTotal__button">
+              <a href="/" class="main__sections__pagoTotal__button__link">
+                <button type="submit" class="main__sections__pagoTotal__button__link__submit">Finalizar Pedido</button>
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

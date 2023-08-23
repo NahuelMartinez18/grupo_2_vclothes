@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <nav class="nav2">
+          <form action="/" method="get">
+            <h2 class="h2-nav">Regístrate</h2>
+            <p class="p-nav">Por favor ingrese su nombre, correo y contraseña</p>
+            <label for="">
+              <input class="input-form" type="email" name="Correo" placeholder="Correo" required>
+              <input class="input-form" type="text" name="Nombre" placeholder="Nombre" required>
+              <input class="input-form" type="password" name="Contraseña" placeholder="Contraseña" required>
+            </label>
+            <input class="boton-finalizar" type="submit" name="enviar" value="Finalizar">
+          </form>
+        </nav>
+      </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
