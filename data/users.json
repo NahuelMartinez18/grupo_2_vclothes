@@ -1,5 +1,38 @@
 [
     {
-        
+        "Identificador": 1, 
+        "Nombre": "Juan", 
+        "Apellido": "Perez", 
+        "Email": "juan.perez@gmail.com", 
+        "Contraseña": "12892", 
+        "Categoria": "Cliente", 
+        "Imagen": ""
+    } ,
+    {
+        "Identificador": 2 , 
+        "Nombre": "Maria", 
+        "Apellido": "Gonzalez", 
+        "Email": "maria.gonzalez@gmail.com", 
+        "Contraseña": "98437", 
+        "Categoria": "Vendedor", 
+        "Imagen": ""
+    } ,
+    {
+        "Identificador": 3, 
+        "Nombre": "Pedro", 
+        "Apellido": "Lopez", 
+        "Email": "pedro.lopez@gmail.com", 
+        "Contraseña": "90409", 
+        "Categoria": "Administrador", 
+        "Imagen": ""
+    } ,
+    {
+        "Identificador": 4, 
+        "Nombre": "Julian", 
+        "Apellido": "Romero", 
+        "Email": "julian.romero@gmail.com", 
+        "Contraseña": "93842", 
+        "Categoria": "Moderador", 
+        "Imagen": ""
     }
 ]
