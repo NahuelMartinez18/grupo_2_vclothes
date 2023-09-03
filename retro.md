@@ -23,3 +23,15 @@
 **4. Hacer menos:** Dejar las cosas para último momento.
 
 **5. Dejar de hacer:** Atrasarse con los contenidos del curso.
+
+### Sprint 3
+
+**1. Comenzar a hacer:** Hacer las dailys.
+
+**2. Hacer más:** Hay que tener más comunicación con todos en el grupo de trabajo.
+
+**3. Continuar haciendo:** Tenemos que seguir entregando los trabajos en tiempo y forma.
+
+**4. Hacer menos:** Hay que tratar de hacer las cosas con tiempo y no dejarlo para el final.
+
+**5. Dejar de hacer:** No es buena idea atrasarse con los contenidos del playground.
