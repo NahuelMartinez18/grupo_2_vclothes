@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "Zapatillas Deportivas",
+      "description": "Zapatillas deportivas de alta calidad para tus actividades físicas favoritas. Ideales para correr, hacer ejercicio y mantener un estilo activo.",
+      "image": "zapatillas1.jpg",
+      "category": "Deportes",
+      "colors": ["Rojo", "Azul", "Negro"],
+      "price": 79.99
+    },
+    {
+      "id": 2,
+      "name": "Botas de Senderismo",
+      "description": "Botas resistentes para aventuras al aire libre y senderismo en la montaña. Mantén tus pies cómodos y protegidos durante tus travesías.",
+      "image": "botas1.jpg",
+      "category": "Aventura",
+      "colors": ["Marrón", "Verde"],
+      "price": 129.99
+    },
+    {
+      "id": 3,
+      "name": "Zapatillas para Correr",
+      "description": "Zapatillas ligeras y cómodas para corredores aficionados y profesionales. Diseñadas para brindar un ajuste perfecto y un rendimiento óptimo.",
+      "image": "zapatillas2.jpg",
+      "category": "Deportes",
+      "colors": ["Blanco", "Negro", "Gris"],
+      "price": 99.99
+    },
+    {
+      "id": 4,
+      "name": "Botines de Fútbol",
+      "description": "Botines de alta calidad para jugadores de fútbol. Ofrecen un agarre excepcional en el campo y un toque preciso del balón.",
+      "image": "botines.jpg",
+      "category": "Deportes",
+      "colors": ["Amarillo", "Negro"],
+      "price": 89.99
+    },
+    {
+      "id": 5,
+      "name": "Zapatillas de Moda",
+      "description": "Zapatillas modernas y elegantes para ocasiones casuales. Combina estilo y comodidad en tu vestimenta diaria.",
+      "image": "zapatillas3.jpg",
+      "category": "Moda",
+      "colors": ["Blanco", "Rosa", "Negro"],
+      "price": 69.99
+    },
+    {
+      "id": 6,
+      "name": "Sandalias de Playa",
+      "description": "Sandalias ligeras y resistentes para tus días en la playa. Perfectas para caminar sobre la arena y disfrutar del sol.",
+      "image": "sandalias.jpg",
+      "category": "Playa",
+      "colors": ["Azul", "Amarillo", "Naranja"],
+      "price": 19.99
+    }
+  ]
+  
