@@ -89,6 +89,7 @@ body {
 
 .section__destacados {
   display: grid;
+  
   place-items: center;
 }
 

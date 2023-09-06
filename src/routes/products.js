@@ -1,16 +1,20 @@
 const express =require('express');
 const router=express.Router();
 
-const productoController=require('../controller/productosConstroller.js')
+const productosController=require('../controller/productosConstroller')
 
-router.get('/detalleProd',productoController.detalle);
+router.get('/',productosController.index);
 
-router.get('/listar',productoController.listar);
+router.get('/create', productosController.create);
 
-router.get('/formProd',productoController.crear);
+// router.get('/detalleProd',productoController.detalle);
 
-router.get('/editProd',productoController.editar);
+// router.get('/listar',productoController.listar);
 
-router.get('/productCart',productoController.shop);
+// router.get('/formProd',productoController.crear);
+
+// router.get('/editProd',productoController.editar);
+
+// router.get('/productCart',productoController.shop);
 
 module.exports=router;

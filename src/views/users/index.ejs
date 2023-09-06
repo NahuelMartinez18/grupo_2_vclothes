@@ -13,137 +13,45 @@
         <section class="section">
           <div class="section__destacados">
             <h2 class="section__destacados__h2">Productos Destacados</h2>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/camperaJeanCordero.jpg" alt="camperaJeanCordero"></a>
-              </div>
+            <!---->
+            <% products.forEach(product=> { %>
+              <article class="section__productView">
+               <div class="section__productView__img">
+                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/<%= product.image %>" alt="camperaJeanCordero"></a>
+              </div> 
               <div class="section__productView__info">
                 <p class="section__productView__info__productName">
-                  Campera de Jeans Lois
+                  <%= product.nombre %>
                 </p>
                 <p class="section__productView__info__precio">
-                  $15.000
+                  <%= product.precio %>
                 </p>
               </div>
-            </article>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/remeraNike.jpg" alt="remeraNike"></a>
-              </div>
+              </article>
+              <% }) %>
+            
+            <!---->
+            <div class="section__ofertas">
+            <h2 class="section__ofertas__h2">Ofertas</h2>    
+            <div class="section__ofertas"></div>
+            <% products.forEach(product=> { %>
+              <article class="section__productView">
+               <div class="section__productView__img">
+                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/<%= product.image %>" alt="camperaJeanCordero"></a>
+              </div> 
               <div class="section__productView__info">
                 <p class="section__productView__info__productName">
-                  Remera NIKE DRI-FIT
+                  <%= product.nombre %>
                 </p>
                 <p class="section__productView__info__precio">
-                  $9.999
+                  <%= product.precio %>
                 </p>
               </div>
-            </article>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/camisetaReebok.jpg" alt="camisetaReebok"></a>
-              </div>
-              <div class="section__productView__info">
-                <p class="section__productView__info__productName">
-                  Camiseta Reebok
-                </p>
-                <p class="section__productView__info__precio">
-                  $7.999
-                </p>
-              </div>
-            </article>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/momJeans.jpg" alt="momJeans"></a>
-              </div>
-              <div class="section__productView__info">
-                <p class="section__productView__info__productName">
-                  Mom Jeans PIERRE BALMAIN
-                </p>
-                <p class="section__productView__info__precio">
-                  $6.999
-                </p>
-              </div>
-            </article>
+              </article>
+              <% }) %>
+            <!---->
           </div>
-          <div class="section__ofertas">
-            <h2 class="section__ofertas__h2">Ofertas</h2>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <img class="section__productView__img__archivo" src="/img/pantalonFila.jpg" alt="pantalonFila">
-              </div>
-              <div class="section__productView__info">
-                <p class="section__productView__info__productName">
-                  Pantalón rompe FILA
-                </p>
-                <p class="section__productView__info__precioOff">
-                  $18.000
-                </p>
-                <p class="section__productView__info__precio">
-                  $13.999
-                </p>
-                <p class="section__productView__info__off">
-                  22% OFF
-                </p>
-              </div>
-            </article>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <img class="section__productView__img__archivo" src="/img/camperaCuero.jpg" alt="camperaCuero">
-              </div>
-              <div class="section__productView__info">
-                <p class="section__productView__info__productName">
-                  Campera de cuero QUARRY
-                </p>
-                <p class="section__productView__info__precioOff">
-                  $35.000
-                </p>
-                <p class="section__productView__info__precio">
-                  $29.999
-                </p>
-                <p class="section__productView__info__off">
-                  14% OFF
-                </p>
-              </div>
-            </article>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <img class="section__productView__img__archivo" src="/img/sweaterCrop.jpg" alt="sweaterCrop">
-              </div>
-              <div class="section__productView__info">
-                <p class="section__productView__info__productName">
-                  Sweater Crop Maorí Colors
-                </p>
-                <p class="section__productView__info__precioOff">
-                  $5.000
-                </p>
-                <p class="section__productView__info__precio">
-                  $4.500
-                </p>
-                <p class="section__productView__info__off">
-                  10% OFF
-                </p>
-              </div>
-            </article>
-            <article class="section__productView">
-              <div class="section__productView__img">
-                <img class="section__productView__img__archivo" src="/img/hoodieBunny.jpg" alt="hoodieBunny">
-              </div>
-              <div class="section__productView__info">
-                <p class="section__productView__info__productName">
-                  Hoodie Bugs Bunny
-                </p>
-                <p class="section__productView__info__precioOff">
-                  $14.999
-                </p>
-                <p class="section__productView__info__precio">
-                  $12.500
-                </p>
-                <p class="section__productView__info__off">
-                  16% OFF
-                </p>
-              </div>
-            </article>
+          
           </div>
         </section>
       </main>
