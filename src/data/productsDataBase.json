@@ -1,0 +1,90 @@
+[
+{
+"id":1,
+"nombre":"purus aliquet",
+"categoria":"habitasse",
+"descripcion":"rhoncus",
+"color":"semper",
+"talle":2,
+"price":7302.43,
+"image":"prenda1.jpg"
+},
+{
+"id":2,
+"nombre":"ultrices",
+"categoria":"mattis",
+"descripcion":"non",
+"color":"ipsum",
+"talle":1,
+"price":1155.2,
+"image":"prenda2.jpg"
+},
+{
+"id":3,
+"nombre":"vulputate",
+"categoria":"duis",
+"descripcion":"et ultrices posuere",
+"color":"amet",
+"talle":3,
+"price":2688.01,
+"image":"prenda3.jpg"
+},
+{
+"id":4,
+"nombre":"orci pede",
+"categoria":"ac",
+"descripcion":"non",
+"color":"nulla",
+"talle":3,
+"price":3655.33,
+"image":"prenda4.jpg"},
+{
+"id":5,
+"nombre":"nec",
+"categoria":"nisl",
+"descripcion":"consequat",
+"color":"ipsum",
+"talle":2,
+"price":4666.32,
+"image":"prenda5.jpg"
+},
+{
+"id":6,
+"nombre":"et",
+"categoria":"nonummy",
+"descripcion":"morbi vel lectus in",
+"color":"id",
+"talle":3,
+"price":8900.47,
+"image":"prenda6.jpg"
+},
+{
+"id":7,
+"nombre":"enim leo",
+"categoria":"fusce",
+"descripcion":"nisl",
+"color":"consectetuer",
+"talle":4,
+"price":3510.29,
+"image":"prenda7.jpg"},
+{
+"id":8,
+"nombre":"convallis duis",
+"categoria":"dapibus",
+"descripcion":"ac lobortis vel dapibus",
+"color":"amet",
+"talle":5,
+"price":6560.92,
+"image":"prenda8.jpg"
+},
+{
+"id":9,
+"nombre":"enim",
+"categoria":"vel",
+"descripcion":"eleifend donec ut dolor",
+"color":"volutpat",
+"talle":3,
+"price":6201.59,
+"image":"prenda6.jpg"
+}
+]
