@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let cont=14;
+
 
 function getProducts() {
 	/*transforma la base de datos en un objeto iterable*/
@@ -20,47 +20,68 @@ const productosController={
     },    
     //Detalle de un producto particular
     detail: (req,res)=>{
-        res.send('dd')
+        const id = req.params.id;
+		const products = getProducts()
+		const productoEncontrado = products.find(product => product.id == id);
+		return res.render("./products/productDetail.ejs", { product: productoEncontrado})
     },
     //Acción de creación (a donde se envía el formulario)
     store: (req,res)=>{
-        cont=cont++
-        let productNew={
-            id: cont++,
-            name: req.body.name,
+        const products=getProducts();
+        const newId=products[products.length - 1].id + 1;
+        const nuevoProducto={
+            id: newId,
+            nombre: req.body.name,
+			category:req.body.category,
             description: req.body.description,
-            image: req.body.image,
-            discount: req.body.descount,
+            color:req.body.color,
+            talle:req.body.talle,
             price: req.body.price,
-            category: req.body.category
+			image: req.file.filename,
         }
-        let products=fs.readFileSync(getProducts);
-        let productsJson
-        if(products==[]){
-            let productsList = []
-        }else{
-            let productsList=JSON.parse(products)
-        }
-        productsList.push(productNew)
-
-        
-         productsJson=Json.stringify(productsList)
-
-        fs.writeFileSync('productsJson',productsJson)
-
-        res.send('dd')
+        products.push(nuevoProducto);
+        fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2));
+        return res.redirect('/products')
     },
     //Formulario de edición de productos
     edit: (req,res)=>{
-        res.send('dd')
+        const id = req.params.id;
+		const products = getProducts()
+		const productoEncontrado = products.find(product => product.id == id);
+		return res.render("./products/modProduct.ejs", { product: productoEncontrado})
     },
     //Acción de edición (a donde se envía el formulario):
     update: (req,res)=>{
-        res.send('dd')
+        const products = getProducts();
+
+        const id = req.params.id;
+
+        products.forEach(prod => {
+            if(prod.id == id) {
+                prod.nombre= req.body.name;
+                prod.category=req.body.category;
+                prod.description= req.body.description;
+                prod.color=req.body.color;
+                prod.talle=req.body.talle;
+                prod.price= req.body.price;
+                return;
+            }
+        });       
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2)); 
+
+        return res.redirect("/products")
     },
     //Acción de borrado
     destroy: (req,res)=>{
-        res.send('dd')
+        let products = getProducts();
+
+        const id=req.params.id;
+
+        products=products.filter(producto=>producto.id != id);
+        
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2)); 
+       
+        return res.redirect("/products");
     },
     
 }
