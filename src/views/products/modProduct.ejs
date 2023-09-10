@@ -7,26 +7,22 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <main>
-        <nav class="nav2">
-              <li>
-                  <a href="">prod 1</a>
-              </li>
-              <li>
-                <a href="">prod 2</a>
-            </li>
-            <li>
-              <a href="">prod 3</a>
-          </li>
-          <form  method="post">
-            <h2 class="h2-nav">Formulario Modificacion Producto</h2>
-              <input class="input-form" type="text" name="name" id="name" placeholder="Nombre Producto" required>
-              <input class="input-form" type="text" name="description" id="description" placeholder="Descripcion" required>
-              <input class="input-form" type="text" name="category" id="category" placeholder="Categoria" required>
-              <input class="input-form" type="text" name="color" id="color" placeholder="Color" required>
-              <input class="input-form" type="text" name="talle" id="talle" placeholder="Talle" required>
-              <input class="input-form" type="text" name="precio" id="precio" placeholder="Precio" required>  
-              <input class="input-form" type="file" name="vistaProd" id="vistaProd" accept=".jpg" >
-            <input class="boton-finalizar" type="submit" name="enviar" value="Guardar">
+      <h2 class="products-title">Edicion: <i><%= product.name %></i></h2>
+      <nav class="nav2">
+          <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST">
+              <label for="name">NOMBRE</label>
+              <input class="input-form" type="text" name="name" id="name" placeholder="Nombre Producto" value="<%= product.nombre %>">
+              <label for="category">CATEGORIA</label>
+              <input class="input-form" type="text" name="category" id="category" placeholder="Categoria" value="<%= product.category %>">
+              <label for="description">DESCRIPCION</label>            
+              <input class="input-form" type="text" name="description" id="description" placeholder="Descripcion" value="<%=  product.description %>">
+              <label for="color">Color</label>
+              <input class="input-form" type="text" name="color" id="color" placeholder="Color" value="<%= product.color %>">
+              <label for="talle">Talle</label> 
+              <input class="input-form" type="text" name="talle" id="talle" placeholder="Talle" value="<%= product.talle %>">
+             <label for="price">PRECIO</label>
+              <input class="input-form" type="text" name="price" id="price" placeholder="Precio" value="<%= product.price %>">  
+              <button type="submit" class="buy-now-button">Guardar producto</button>
           </form>
         </nav>
       </main>

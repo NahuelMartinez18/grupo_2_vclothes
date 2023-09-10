@@ -8,16 +8,23 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <nav class="nav2">
-          <form action="/" method="post">
+          <form action="/products" method="post" enctype="multipart/form-data">
             <h2 class="h2-nav">Formulario Carga Producto</h2>
+              <label for="name">NOMBRE</label>
               <input class="input-form" type="text" name="name" id="name" placeholder="Nombre Producto" required>
-              <input class="input-form" type="text" name="description" id="description" placeholder="Descripcion" required>
+              <label for="category">CATEGORIA</label>
               <input class="input-form" type="text" name="category" id="category" placeholder="Categoria" required>
-              <input class="input-form" type="text" name="color" id="color" placeholder="Color" required>
-              <input class="input-form" type="text" name="talle" id="talle" placeholder="Talle" required>
-              <input class="input-form" type="text" name="precio" id="precio" placeholder="Precio" required>  
-              <input class="input-form" type="file" name="vistaProd" id="vistaProd" accept=".jpg" >
-            <input class="boton-finalizar" type="submit" name="enviar" value="Guardar">
+              <label for="description">DESCRIPCION</label>
+              <input class="input-form" type="text" name="description" id="description" placeholder="Descripcion" required>
+              <label for="color">Color</label>
+              <input class="input-form" type="text" name="color" id="color" placeholder="rojo" required>
+              <label for="talle">Talle</label>  
+              <input class="input-form" type="text" name="talle" id="talle" placeholder="1,2,3" required>
+              <label for="price">PRECIO</label>
+              <input class="input-form" type="text" name="precio" id="price" placeholder="4800.00" required>  
+              <label for="vistaProd">Imagen Producto</label>
+              <input class="input-form" type="file" name="vistaProd" id="" accept=".jpg" >
+              <button type="submit" class="buy-now-button">Guardar producto</button>
           </form>
         </nav>
       </main>

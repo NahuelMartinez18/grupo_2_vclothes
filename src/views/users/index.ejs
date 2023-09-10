@@ -17,7 +17,7 @@
             <% products.forEach(product=> { %>
               <article class="section__productView">
                <div class="section__productView__img">
-                <a href="products/detalleProd"><img class="section__productView__img__archivo" src="/img/<%= product.image %>" alt="camperaJeanCordero"></a>
+                <a href="products/detalleProd/<%=product.id%>"><img class="section__productView__img__archivo" src="/img/<%= product.image %>" alt="camperaJeanCordero"></a>
               </div> 
               <div class="section__productView__info">
                 <p class="section__productView__info__productName">

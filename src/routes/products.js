@@ -1,5 +1,6 @@
 const express =require('express');
 const router=express.Router();
+const upload=require('../middlewares/multer')
 
 const productosController=require('../controller/productosConstroller')
 
@@ -7,14 +8,16 @@ router.get('/',productosController.index);
 
 router.get('/create', productosController.create);
 
-// router.get('/detalleProd',productoController.detalle);
+router.post('/',upload.single('vistaProd') , productosController.store);
 
-// router.get('/listar',productoController.listar);
+router.get('/detalleProd/:id/',productosController.detail);
 
-// router.get('/formProd',productoController.crear);
+router.get('/edit/:id',productosController.edit);
 
-// router.get('/editProd',productoController.editar);
+router.put('/edit/:id',productosController.update);
 
-// router.get('/productCart',productoController.shop);
+router.delete('/delete/:id', productosController.destroy);
+
+//  router.get('/productCart',productoController.shop);
 
 module.exports=router;
