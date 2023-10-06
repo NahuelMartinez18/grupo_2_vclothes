@@ -35,3 +35,15 @@
 **4. Hacer menos:** Hay que tratar de hacer las cosas con tiempo y no dejarlo para el final.
 
 **5. Dejar de hacer:** No es buena idea atrasarse con los contenidos del playground.
+
+### Sprint 
+
+**1. Comenzar a hacer:** Hay que comenzar a tener una mejor administracion de nuestro tiempo.
+
+**2. Hacer más:** Hay que mantener mas una buena comunicacion.
+
+**3. Continuar haciendo:** Seguir trabajando en  grupo.
+
+**4. Hacer menos:** Hay que dejar de procrastinar.
+
+**5. Dejar de hacer:** Hay que dejar de estar tan dispersos.
