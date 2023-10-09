@@ -21,12 +21,12 @@
   },
   {
     "id": 3,
-    "nombre": "vulputate",
-    "category": "duis",
+    "nombre": "canguro de poliester",
+    "category": "frio",
     "description": "et ultrices posuere",
     "color": "amet",
-    "talle": 3,
-    "price": 2688.01,
+    "talle": "3",
+    "price": "5000.01",
     "image": "prenda3.jpg"
   },
   {
@@ -80,12 +80,21 @@
     "image": "prenda6.jpg"
   },
   {
-    "id": 11,
-    "nombre": "re rock",
-    "category": "verano",
-    "description": "remera manga corta",
+    "id": 10,
+    "nombre": "mmad",
+    "category": "asasdad",
+    "description": "dadad",
     "color": "negro",
-    "talle": "3",
-    "image": "vistaProd-1694368791313-267382787.jpg"
+    "talle": "6",
+    "image": "vistaProd-1696764937442-754879362.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "vestido",
+    "category": "vestido",
+    "description": "vestido",
+    "color": "vestido",
+    "talle": "vestido",
+    "image": "vistaProd-1696771008663-448576844.jpg"
   }
 ]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hernan Gustavo Gabriel",
+    "email": "gus@gmail.com",
+    "password": "$2a$10$FRRwrhT9REeQJY55u0gL/OLMNIP4wzZ/2BQZ/LvScnBeeZF7Ip6Vq",
+    "profile": "profile-1696801856813-238453851.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Hernan Gustavo Gabriel",
+    "email": "her@gmail.com",
+    "password": "$2a$10$m9QeOpGSqQ9BCmghELuVjuSyMhie6FinQSZR410jN5coBQZnQdwoi",
+    "profile": "profile-1696803185884-474775797.jpg"
+  }
+]

@@ -8,15 +8,22 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <nav class="nav2">
-          <form action="/" method="get">
+         <!--- <% if(locals.errors){ %> 
+              <% for(let error in errors) %>
+              <p><%= error.msg %></p>
+          <% }%>-->
+          <form action="/user" method="post" enctype="multipart/form-data">
             <h2 class="h2-nav">Regístrate</h2>
             <p class="p-nav">Por favor ingrese su nombre, correo y contraseña</p>
-            <label for="">
-              <input class="input-form" type="email" name="Correo" placeholder="Correo" required>
-              <input class="input-form" type="text" name="Nombre" placeholder="Nombre" required>
-              <input class="input-form" type="password" name="Contraseña" placeholder="Contraseña" required>
-            </label>
-            <input class="boton-finalizar" type="submit" name="enviar" value="Finalizar">
+            <label for="name">NOMBRE</label>
+              <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+              <label for="email">email</label>
+              <input class="input-form" type="email" name="email" id="email" placeholder="Correo" required>
+              <label for="password">password</label>
+              <input class="input-form" type="password" name="password" id="password" placeholder="Contraseña" required>       
+              <label for="profile">perfil</label>
+              <input class="input-form" type="file" name="profile" id="" accept=".jpg" >
+              <button type="submit" class="buy-now-button">Guardar</button>
           </form>
         </nav>
       </main>

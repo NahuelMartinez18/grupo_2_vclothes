@@ -8,17 +8,21 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <nav class="nav2">
-          <form action="/" method="post">
+          <form action="/user/login" method="post">
             <h2 class="h2-nav">Iniciar Sesión</h2>
             <p class="p-nav">Por favor ingrese su correo y contraseña</p>
-            <label for="">
-              <input class="input-form" type="email" name="Correo" placeholder="Correo" required>
-              <input class="input-form" type="password" name="Contraseña" placeholder="Contraseña" required>
-            </label>
-            <a class="a-recuperar-cuenta" href="#">¿Olvidaste tu contraseña?</a>
-            <input class="boton-finalizar" type="submit" name="enviar" value="Ingresar">
-            <a class="a-crear-cuenta" href="/register">Crear Cuenta</a>
+              <input class="input-form" type="email" name="email" id="email" placeholder="Correo" required>
+              <% if (locals.errors && errors.email){ %>
+                  <%= errors.email.msg %>
+                <% } %>
+              <input class="input-form" type="password" name="password" id="password" placeholder="Contraseña" required>
+              <button type="submit" class="buy-now-button">ingresar</button>
+
+             <a class="a-crear-cuenta" href="/user/register">Crear Cuenta</a>
+              
+              <a class="a-recuperar-cuenta" href="#">¿Olvidaste tu contraseña?</a>
           </form>
+          
         </nav>
       </main>
 
