@@ -31,16 +31,7 @@ app.set('views',path.join(__dirname,"/views"))
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRoutes=require('./routes/mainRoutes');
-const userRoutes=require('./routes/usersRoutes')
-const rutasProductos=require('./routes/products');
 
-
- app.use('/',mainRoutes);
-app.use('/user',userRoutes);
-app.use('/products',rutasProductos);
-
-
-
+app.use('/',mainRoutes);
 
 app.listen(PORT, () => console.log("Servidor corriendo en el puerto:" + PORT));
-

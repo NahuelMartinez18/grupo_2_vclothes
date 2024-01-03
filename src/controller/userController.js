@@ -3,6 +3,8 @@ const path = require('path');
 const User = require('../models/user')
 const bcryptjs=require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require('../database/models')
+
 
 
 
@@ -17,15 +19,17 @@ const userController={
     register: (req,res)=>{
         return res.render('users/register')
     },
-    processRegister: (req,res)=>{
-         const resultValidation = validationResult(req);
-         if(resultValidation.errors.length > 0){
-            return res.render('/users/register',{
+    processRegister: async (req,res)=>{
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render('users/register',{
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-         }   
-        let userInBd=User.findByField('email',req.body.email);
+        }   
+        
+        let userInBd = User.findByField('email', req.body.email);
         
         if(userInBd){
             return res.render('users/register',{
@@ -41,20 +45,26 @@ const userController={
             nombre: req.body.nombre,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password,10),
-            profile: req.file.filename
+            profile: req.file.path.replace("public", "")
         }
-        let userCreated=User.create(userToCreate);
-        return res.redirect('/user');
+
+        const product = await db.User.create(userToCreate)
+
+        return res.redirect('/');
     },
-    loginProcess:(req,res)=>{
-        let userToLogin=User.findByField('email',req.body.email);
-        
-        if(userToLogin){
+    loginProcess: async (req,res) => {
+        const userToLogin = await db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+
+        if(userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(isOkThePassword){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                return res.redirect('/user/profile')
+                delete userToLogin.dataValues.password;
+                req.session.userLogged = structuredClone(userToLogin.dataValues);
+                return res.redirect('/profile')
             }
             return res.render('users/login',{
                 errors: {
@@ -62,9 +72,7 @@ const userController={
                         msg: 'credencial invalida'
                     }
                 }
-            });
-
-            
+            }); 
         }
         return res.render('users/login',{
             errors: {

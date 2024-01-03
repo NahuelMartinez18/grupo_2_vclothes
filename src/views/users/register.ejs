@@ -8,11 +8,12 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <nav class="nav2">
-         <!--- <% if(locals.errors){ %> 
-              <% for(let error in errors) %>
-              <p><%= error.msg %></p>
-          <% }%>-->
-          <form action="/user" method="post" enctype="multipart/form-data">
+          <% if(locals.errors){ %> 
+            <% for(let error in errors) {%>
+              <p><%= errors[error].msg %></p>
+            <% } %>
+          <% }%>
+          <form action="/register" method="POST" enctype="multipart/form-data">
             <h2 class="h2-nav">Regístrate</h2>
             <p class="p-nav">Por favor ingrese su nombre, correo y contraseña</p>
             <label for="name">NOMBRE</label>

@@ -28,8 +28,9 @@ body {
 
 .nav__categorias {
   display: flex;
-  justify-content: space-between;
-  width: 14em;
+  justify-content: flex-start;
+  width: 50%;
+  gap: 1rem;
 }
 
 .nav__rigthDiv {

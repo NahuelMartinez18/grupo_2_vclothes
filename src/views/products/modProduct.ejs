@@ -9,19 +9,17 @@
     <main>
       <h2 class="products-title">Edicion: <i><%= product.name %></i></h2>
       <nav class="nav2">
-          <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST">
+          <form action="/edit/<%= product.id %>?_method=PUT" method="POST">
               <label for="name">NOMBRE</label>
-              <input class="input-form" type="text" name="name" id="name" placeholder="Nombre Producto" value="<%= product.nombre %>">
-              <label for="category">CATEGORIA</label>
-              <input class="input-form" type="text" name="category" id="category" placeholder="Categoria" value="<%= product.category %>">
+              <input class="input-form" type="text" name="name" id="name" placeholder="Nombre Producto" value="<%= product.name %>">
               <label for="description">DESCRIPCION</label>            
               <input class="input-form" type="text" name="description" id="description" placeholder="Descripcion" value="<%=  product.description %>">
               <label for="color">Color</label>
-              <input class="input-form" type="text" name="color" id="color" placeholder="Color" value="<%= product.color %>">
+              <input class="input-form" type="text" name="color" id="color" placeholder="Color" value="<%= product.color.name_color %>">
               <label for="talle">Talle</label> 
               <input class="input-form" type="text" name="talle" id="talle" placeholder="Talle" value="<%= product.talle %>">
              <label for="price">PRECIO</label>
-              <input class="input-form" type="text" name="price" id="price" placeholder="Precio" value="<%= product.price %>">  
+              <input class="input-form" type="text" name="price" id="price" placeholder="Precio" value="<%= product.precio %>">  
               <button type="submit" class="buy-now-button">Guardar producto</button>
           </form>
         </nav>

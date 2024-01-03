@@ -8,7 +8,11 @@ En éste proyecto vamos a crear una página web sencilla y minimalista para la v
 
 Nuestro público objetivo son adolecentes y adultos que les guste vestir con éste estilo.
 
-### Integrante del proyecto:
+### Integrantes del proyecto:
+
+**Nahuel Martinez:** Tengo 17 años, voy a 5to año de secundaria, me gusta la inteligencia artificial, la música y el cine.
+
+**Juan Carlos Gutierrez:** Tengo 17 años, estoy en el último año de secundaria, me gusta ir al gimnacio y la música.
 
 **Sofia Torrico Alcoba:** Tengo 17 años, curso el último año de secundaria, me gusta el cine, la música y los juegos.
 

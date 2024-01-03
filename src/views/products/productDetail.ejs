@@ -8,7 +8,7 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <nav class="nav-main">
-          <h2 class="products-title">Detalle del producto: <%= product.nombre %></h2>
+          <h2 class="products-title">Detalle del producto: <%= product.name %></h2>
       
           <div class="div-img">
             <img src="/img/<%= product.image %>" >
@@ -16,15 +16,15 @@
           <div class="div-carta">
             <div class="div-lista">
               <p class="p-lista">Descipcion del producto: <%= product.description%></p>
-              <p class="p-lista">color: <%= product.color%></p>
+              <p class="p-lista">color: <%= product.color.name_color%></p>
               <p class="p-lista">Talles: <%= product.talle%></p>
-              <p class="p-lista">Precio : <%=  product.price%></p>
+              <p class="p-lista">Precio : <%=  product.precio%></p>
             </div>
             <a href="#" class="buy-now-button">COMPRAR AHORA</a>
 						<hr>
 
-						<a class="boton-finalizar" href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-						<form class="boton-finalizar" action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+						<a class="boton-finalizar" href="/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+						<form class="boton-finalizar" action="/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button class="boton-finalizar" type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
           </div>

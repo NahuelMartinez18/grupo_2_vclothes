@@ -12,5 +12,19 @@
     "email": "her@gmail.com",
     "password": "$2a$10$m9QeOpGSqQ9BCmghELuVjuSyMhie6FinQSZR410jN5coBQZnQdwoi",
     "profile": "profile-1696803185884-474775797.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "asd",
+    "email": "asd@asd.asd",
+    "password": "$2a$10$p6VBb0IcQhDd.bQ5GQhFh.EEkY5E4BXTQ1.ag/WegpcCYzdhrpN3m",
+    "profile": "profile-1703645826439-508839410.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "asd",
+    "email": "asd@asd.asd",
+    "password": "$2a$10$Ujk8RRCTvcU24eryE1k2aeGEpFn51SEPa0R4/MHzR3UyxBDZmWnZS",
+    "profile": "profile-1703637241302-460740849.jpg"
   }
 ]

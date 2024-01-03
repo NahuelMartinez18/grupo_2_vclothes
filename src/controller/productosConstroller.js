@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const db = require('../database/models')
 
 
 function getProducts() {
@@ -10,78 +11,102 @@ function getProducts() {
 
 const productosController={
     //Listado de productos
-    index: (req,res)=>{
-        const products=getProducts();
-        return res.render('./users/index',{products})
+    index: async (req, res) => {
+        const products = await db.Prenda.findAll()
+        return res.render('./users/index', { products: products })
     },
     //Formulario de creación de productos
     create: (req,res)=>{
             res.render('./products/formProduct.ejs')
     },    
     //Detalle de un producto particular
-    detail: (req,res)=>{
-        const id = req.params.id;
-		const products = getProducts()
-		const productoEncontrado = products.find(product => product.id == id);
-		return res.render("./products/productDetail.ejs", { product: productoEncontrado})
+    detail: async (req,res) => {
+        const id_param = req.params.id;
+        const product = await db.Prenda.findOne({
+            where: {
+                id: id_param
+            },
+            include: [
+                {association: 'color'}
+            ]
+        })
+        return res.render("../views/products/productDetail.ejs", { product: product })
     },
     //Acción de creación (a donde se envía el formulario)
-    store: (req,res)=>{
-        const products=getProducts();
-        const newId=products[products.length - 1].id + 1;
-        const nuevoProducto={
-            id: newId,
-            nombre: req.body.name,
-			category:req.body.category,
+    store: async (req,res)=>{
+        const colors = await db.Color.findOrCreate({
+            where: {
+                name_color: req.body.color
+            }
+        })
+
+        const nuevoProducto = {
+            name: req.body.name,
             description: req.body.description,
-            color:req.body.color,
-            talle:req.body.talle,
-            price: req.body.price,
+            id_color: colors[0].id,
+            talle: req.body.talle,
+            precio: req.body.precio,
 			image: req.file.filename,
         }
-        products.push(nuevoProducto);
-        fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2));
-        return res.redirect('/products')
+
+        const pruduct = await db.Prenda.create(nuevoProducto)
+        return res.redirect('/')
     },
     //Formulario de edición de productos
-    edit: (req,res)=>{
-        const id = req.params.id;
-		const products = getProducts()
-		const productoEncontrado = products.find(product => product.id == id);
-		return res.render("./products/modProduct.ejs", { product: productoEncontrado})
+    edit: async (req,res)=>{
+        const id_param = req.params.id;
+
+        const product = await db.Prenda.findOne({
+            where: {
+                id: id_param
+            },
+            include: [
+                {association: 'color'}
+            ]
+        })
+		
+		return res.render("./products/modProduct.ejs", { product: product })
     },
     //Acción de edición (a donde se envía el formulario):
-    update: (req,res)=>{
-        const products = getProducts();
+    update: async (req,res)=>{
+        const id_param = req.params.id;
 
-        const id = req.params.id;
-
-        products.forEach(prod => {
-            if(prod.id == id) {
-                prod.nombre= req.body.name;
-                prod.category=req.body.category;
-                prod.description= req.body.description;
-                prod.color=req.body.color;
-                prod.talle=req.body.talle;
-                prod.price= req.body.price;
-                return;
+        const color = await db.Color.findOrCreate({
+            where: {
+                name_color: req.body.color
             }
-        });       
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2)); 
+        })
 
-        return res.redirect("/products")
+        const update_product = {
+            name: req.body.name,
+            description: req.body.description,
+            talle: req.body.talle,
+            precio: req.body.price,
+            id_color: color[0].id
+        }
+
+        const product = await db.Prenda.update(
+            update_product,
+            {
+                where: {
+                    id: id_param
+                }
+            }
+        )
+
+        return res.redirect("/")
     },
     //Acción de borrado
-    destroy: (req,res)=>{
-        let products = getProducts();
+    destroy: async (req,res)=>{
+        const id_param = req.params.id;
 
-        const id=req.params.id;
-
-        products=products.filter(producto=>producto.id != id);
+        const product = await db.Prenda.destroy({
+            where: {
+                id: id_param
+            }
+        })
         
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2)); 
-       
-        return res.redirect("/products");
+        return res.redirect("/");
     },
     
 }

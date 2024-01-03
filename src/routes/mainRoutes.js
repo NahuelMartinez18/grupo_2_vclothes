@@ -1,12 +1,11 @@
 const express=require('express');
 const router=express.Router();
 
-const mainController=require('../controller/mainController');
+const userRoutes=require('./usersRoutes')
+const rutasProductos=require('./products');
 
-
-router.get('/',mainController.index);
-
-
-
+// router.use('/',mainController.index);
+router.use('/',userRoutes);
+router.use('/',rutasProductos);
 
 module.exports=router;

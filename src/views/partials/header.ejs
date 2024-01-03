@@ -10,10 +10,15 @@
         <p class="nav__categorias__ctg2">
           OFERTAS
         </p>
+        <% if (locals.isLogged) { %>
+          <a href="/create">
+            <p class="nav__categorias__ctg2">
+              AGREGAR PRODUCTO
+            </p>
+          </a>
+        <% } %>
       </div>
-      <% if(locals.islogged){ %>
-          <a href="/user/logout">salir</a>
-      <% }else { %>  
+      
       <div class="nav__rigthDiv">
         <div class="nav__rigthDiv__submitButton">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -22,9 +27,11 @@
           <a class="nav__rigthDiv__cartButton__link" href="/products/productCart"><i class="fa-solid fa-cart-plus"></i></a>
         </div>
         <div class="nav__rigthDiv__userButton">
-          <a class="nav__rigthDiv__userButton__link" href="/user/login"><i class="fa-solid fa-user"></i></a>
+          <a class="nav__rigthDiv__userButton__link" href="/login"><i class="fa-solid fa-user"></i></a>
         </div>
+        <% if(locals.isLogged){ %>
+          <a href="/logout" style="color: white;">salir</a>
+        <% } %>  
       </div>
-      <% } %>
     </nav>
   </header>
